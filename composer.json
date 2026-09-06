@@ -1,0 +1,9 @@
+{
+    "name": "basic-app/jquery3",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "BasicApp\\Jquery3\\": "src/"
+        }
+    }
+}
