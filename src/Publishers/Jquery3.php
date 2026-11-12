@@ -5,7 +5,7 @@
  */
 namespace BasicApp\Jquery3\Publishers;
 
-use BasicApp\Core\Publisher;
+use BasicApp\Publisher\Publisher;
 
 class Jquery3 extends Publisher
 {
@@ -21,7 +21,7 @@ class Jquery3 extends Publisher
      *
      * @var string
      */
-    protected $source = __DIR__ . '/../../assets';
+    //protected $source = ROOTPATH;
 
     /**
      * FCPATH is always the default destination,
@@ -38,8 +38,11 @@ class Jquery3 extends Publisher
      */
     public function publish(): bool
     {
-        $this->deleteFiles($this->destination);
-
-        return parent::publish();
+        return $this->wipe()
+            ->addUris([
+                'https://code.jquery.com/jquery-3.7.1.js',
+                'https://code.jquery.com/jquery-3.7.1.min.js'
+            ])
+            ->merge(true);
     }
 }

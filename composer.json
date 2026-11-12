@@ -3,7 +3,10 @@
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "BasicApp\\Jquery3\\": "src/"
+            "BasicApp\\Jquery3\\": "src"
         }
+    },
+    "require": {
+        "basic-app/publisher": "*"
     }
 }
