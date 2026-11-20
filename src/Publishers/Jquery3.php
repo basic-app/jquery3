@@ -15,16 +15,7 @@ class Jquery3 extends Publisher
     /**
      * Tell Publisher where to create destination directory.
      */
-    protected $createDestination = true;
-
-    /**
-     * Tell Publisher where to get the files.
-     * Since we will use Composer to download
-     * them we point to the "vendor" directory.
-     *
-     * @var string
-     */
-    //protected $source = ROOTPATH;
+    protected bool $createDestination = true;
 
     /**
      * FCPATH is always the default destination,
